@@ -105,7 +105,7 @@ Tallo: 24-26
 Bulbo: 25-26
 Tallo: 27-29
 Bulbo: 28-29
-Bucle interno: 30-36
+Lazo: Bucle interno: 30-36
 Tallo: 42-47
 Tallo: 43-47
 Tallo: 44-47

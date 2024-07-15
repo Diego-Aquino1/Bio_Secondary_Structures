@@ -71,12 +71,12 @@ def traceback(sequence, energy_matrix, alpha):
             visited[i] = visited[j] = True
             if j - i > 1:
                 if all(traceback_pairs[x] == "." for x in range(i + 1, j)):
-                    structures.append(f"Bucle interno: {i + 1}-{j + 1}")
+                    structures.append(f"Lazo: Bucle interno: {i + 1}-{j + 1}")
                 else:
                     structures.append(f"Tallo: {i + 1}-{j + 1}")
             else:
                 if i == 0 or j == length - 1:
-                    structures.append(f"Base no emparejada: {i + 1}-{j + 1}")
+                    structures.append(f"Lazo: Base no emparejada: {i + 1}-{j + 1}")
                 else:
                     structures.append(f"Bulbo: {i + 1}-{j + 1}")
 
@@ -109,7 +109,7 @@ def plot_structure(sequence, pairs, filename, node_color="#808080", edge_color="
     plt.savefig(filename)  # Guarda la figura con el nombre especificado
     plt.close()
 
-sequence_input = "ucaagcguuagagaagucauuaugugauaaaaaaauucaacuugguaucaacuuaacuaa"
+sequence_input = "ucaagcguua"
 
 sequence = sequence_input.upper()
 alpha_dict = {"CG": -1, "GC": -1, "AU": -1, "UA": -1, "GU": -1, "UG": -1}
@@ -118,10 +118,10 @@ energy_matrix, min_energy_score = predict_secondary_structure(sequence, alpha_di
 traceback_structure, paired_positions, structures = traceback(sequence, energy_matrix, alpha_dict)
 
 # Guardar la estructura en un archivo con el nombre 'structure.png'
-plot_structure(sequence, paired_positions, filename='structure3.png', node_color="#808080", edge_color="#808080", highlight_color="#FF5733")
+plot_structure(sequence, paired_positions, filename='structure.png', node_color="#808080", edge_color="#808080", highlight_color="#FF5733")
 
 # Guardar el puntaje de energía, las estructuras y los pares emparejados en un archivo de salida
-with open('output3.txt', 'w') as f:
+with open('output.txt', 'w') as f:
     f.write(f"Puntaje mínimo de energía: {min_energy_score}\n\n")
     
     f.write("Matriz de energía:\n")

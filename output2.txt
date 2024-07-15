@@ -35,9 +35,9 @@ Posiciones emparejadas:
 Estructuras:
 Tallo: 1-6
 Tallo: 2-6
-Protuberancia: 5-6
-Protuberancia: 7-8
-Protuberancia: 9-10
+Bulbo: 5-6
+Bulbo: 7-8
+Bulbo: 9-10
 Tallo: 13-17
-Bucle interno: 14-17
-Base no emparejada: 19-20
+Lazo: Bucle interno: 14-17
+Lazo: Base no emparejada: 19-20

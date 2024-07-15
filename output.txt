@@ -1,6 +1,6 @@
-Minimum Energy Score: -4
+Puntaje mínimo de energía: -4
 
-Energy Matrix:
+Matriz de energía:
 0	0	-1	-1	-1	-2	-2	-3	-4	-4
 0	0	0	0	-1	-1	-2	-2	-3	-3
 0	0	0	0	0	-1	-1	-2	-3	-3
@@ -12,8 +12,14 @@ Energy Matrix:
 0	0	0	0	0	0	0	0	0	-1
 0	0	0	0	0	0	0	0	0	0
 
-Paired Positions:
+Posiciones emparejadas:
 1-10
 3-9
 4-8
 6-7
+
+Estructuras:
+Tallo: 1-7
+Tallo: 3-7
+Tallo: 4-7
+Bulbo: 6-7
